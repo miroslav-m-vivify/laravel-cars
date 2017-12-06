@@ -97,7 +97,7 @@
                         @foreach ($cars as $car)
                         <tr>
                             <td>
-                                {{ $car->title }}
+                            <a href="/cars/{{ $car->id }}">{{ $car->title }}</a>
                             </td>
                             <td>
                                 {{ $car->producer }}
@@ -105,7 +105,7 @@
                             <td>
                                 {{ $car->number_of_doors }}
                             </td>
-                        </tr>
+                        </tr>                       
                         @endforeach
                     </tbody>
                 </table>
