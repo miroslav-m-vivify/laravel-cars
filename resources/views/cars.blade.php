@@ -78,9 +78,38 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    About us
-                </div>
+                @if ($cars)
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                Title
+                            </th>
+                            <th>
+                                Producer
+                            </th>
+                            <th>
+                                Number of doors
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($cars as $car)
+                        <tr>
+                            <td>
+                                {{ $car->title }}
+                            </td>
+                            <td>
+                                {{ $car->producer }}
+                            </td>
+                            <td>
+                                {{ $car->number_of_doors }}
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+                @endif
 
                 <div class="links">
                     <a href="/">Home</a>
